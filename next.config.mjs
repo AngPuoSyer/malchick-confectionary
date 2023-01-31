@@ -13,5 +13,10 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    // @ts-ignore
+    domains: ['d20izgrkt6x63l.cloudfront.net'],
+    formats: ['image/webp']
+  }
 };
 export default config;
