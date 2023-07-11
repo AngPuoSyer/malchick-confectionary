@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           </div>
           <div className="my-10 flex w-full justify-between">
             <h2 className="text-4xl font-bold">Our Products</h2>
-            <Link href="/producnpxts">View More</Link>
+            <Link href="/products">View More</Link>
           </div>
           <Grid
             container
@@ -94,7 +94,11 @@ const Home: NextPage = () => {
                             }}
                           >
                             <Image
-                              src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/cursed.jpg`}
+                              src={
+                                product.imgUrl
+                                  ? `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/${product.imgUrl}`
+                                  : `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/cursed.jpg`
+                              }
                               alt={`${product.name} ${index}`}
                               fill
                             />
